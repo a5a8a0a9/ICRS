@@ -1,0 +1,43 @@
+<ion-header>
+  <!--style="--ion-background-color: rgba(255,255,255,0.25);"-->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button style="--color: #000"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="font-style" style="color: #000;">
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding [scrollEvents]="true" id="content"
+  style="--background: url(/assets/image/home_bg.png) center/cover no-repeat">
+
+  <!-- <div *ngFor="let msg of message | async" >
+    <div *ngIf="msg.sentBy==='user'">我：{{msg.content}}</div>
+    <div *ngIf="msg.sentBy==='bot'">機器人：{{msg.content}}</div>
+</div> -->
+
+  <div class="chats">
+    <div class="chatbox">
+      <div *ngFor="let msg of message | async">
+        <div class="message sent font-style" *ngIf="msg.sentBy==='user'">
+          {{msg.content}}
+        </div>
+        <div class="message received font-style" *ngIf="msg.sentBy==='bot'" innerHtml="{{msg.content}}">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <!--style="--background: rgba(255,255,255,0.3)"-->
+    <ion-icon name="mic" (click)="startListening()"></ion-icon>
+    <ion-input [(ngModel)]="input" class="font-style" style="color:#000" name="message" placeholder="send message ...">
+    </ion-input>
+    <ion-icon (click)="talk()" name="md-send"></ion-icon>
+  </ion-item>
+</ion-footer>

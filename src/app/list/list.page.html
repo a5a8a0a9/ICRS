@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      列表頁
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-list-header>
+          <ion-label>Ranks</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let rank of ranks">
+        <ion-label>{{rank.store}}-{{rank.rank}}</ion-label>
+      </ion-item>
+      <ion-list-header>
+          <ion-label>Stores</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let store of stores">
+        <ion-label>{{store.name}}</ion-label>
+      </ion-item>
+  </ion-list>
+</ion-content>

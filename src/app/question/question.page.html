@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>問卷調查</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list *ngIf="order==1">
+	  <ion-list-header>
+		<h3>早餐</h3>
+	  </ion-list-header>
+	  <ion-item *ngFor="let option of breakfast">
+		<ion-label>{{option.content}}</ion-label>
+		<ion-checkbox slot="end" [(ngModel)]="option.checked"></ion-checkbox>
+	  </ion-item>
+	</ion-list>
+
+	<ion-list *ngIf="order==2">
+	  <ion-list-header>
+		<h3>午餐/晚餐</h3>
+	  </ion-list-header>
+	  <ion-item *ngFor="let option of lunch">
+		<ion-label>{{option.content}}</ion-label>
+		<ion-checkbox slot="end" [(ngModel)]="option.checked"></ion-checkbox>
+	  </ion-item>
+	</ion-list>
+
+	<!-- <ion-list *ngIf="order==3">
+	  <ion-list-header>
+		<h3>晚餐</h3>
+	  </ion-list-header>
+	  <ion-item *ngFor="let option of dinner">
+		<ion-label>{{option.content}}</ion-label>
+		<ion-checkbox slot="end" [(ngModel)]="option.checked"></ion-checkbox>
+	  </ion-item>
+	</ion-list> -->
+
+	
+</ion-content>
+<ion-footer>
+	<ion-toolbar>
+		<ion-row text-center>
+			<ion-col size="6" text-center>
+				<ion-button *ngIf="order!=1" shape="round" (click)="pre()">
+				  <ion-icon slot="icon-only" name="arrow-dropleft"></ion-icon>
+				</ion-button>
+			</ion-col>
+			<ion-col size="6" text-center>
+				<ion-button *ngIf="order!=2" shape="round" (click)="next()">
+				  <ion-icon slot="icon-only" name="arrow-dropright"></ion-icon>
+				</ion-button>
+				<ion-button *ngIf="order==2" (click)="finish()">
+					註冊完成
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-toolbar>
+</ion-footer>

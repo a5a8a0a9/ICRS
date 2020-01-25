@@ -1,0 +1,7 @@
+{
+  "name": "ICRS",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>會員註冊</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding style="text-align:center;">
+  <form #registeForm="ngForm" (ngSubmit)="registe(registeForm)">
+    <ion-item style="background: none">
+      <ion-label position="floating">暱稱</ion-label>
+      <ion-input ngModel name="displayName" required></ion-input>
+    </ion-item>
+    <ion-item style="background: none">
+      <ion-label position="floating">帳號Account</ion-label>
+      <ion-input ngModel name="email" pattern="[\w-]+@[\w-]+(\.[\w-]+)+" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">密碼Password</ion-label>
+      <ion-input ngModel name="password" type="password" pattern=".{6,}" required></ion-input>
+    </ion-item>
+    <div style="text-align: center">
+      <ion-button expand="block" type="submit"
+        [disabled]="registeForm.invalid">下一步</ion-button>
+    </div>
+  </form>
+
+
+
+
+
+
+
+
+
+  <!-- <ion-item>
+        <ion-label position="floating">帳號Account</ion-label>
+        <ion-input [(ngModel)]="input.email"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">密碼Password</ion-label>
+          <ion-input [(ngModel)]="input.password" type="password" pattern=".{6,}"></ion-input>
+      </ion-item>
+      <div style="text-align: center">
+          <ion-button expand="block" size="large" (click)="registe()" style="--background: rgba(56, 128, 255,0.7);">下一步</ion-button>
+      </div> -->
+</ion-content>

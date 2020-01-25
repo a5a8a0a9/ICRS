@@ -1,0 +1,44 @@
+ion-header{
+    
+    --ion-background-color: linear-gradient(135deg ,rgba(15,45,135,1),rgba(6, 131, 209,1), #fff);
+    ion-toolbar{
+        --color: #fff;
+        font-family: 'Microsoft Jhenghei';
+    }
+}
+
+ion-content{
+    font-family: 'Microsoft Jhenghei';
+    // --background: url(/assets/image/登入介面_底.png) center/cover no-repeat;
+    --background: none;
+    ion-list{
+        font-family: 'Microsoft Jhenghei';
+        --ion-background-color: none;
+        ion-list-header{
+            --color: #fff;
+        }
+        ion-item{
+            --ion-font-family: 'Microsoft Jhenghei';
+            --color:#ffffff;
+        }
+    }
+}
+
+ion-footer{
+    --background: none;
+    ion-toolbar{
+        --ion-background-color: none;
+
+        ion-button{
+            font-family: 'Microsoft Jhenghei';
+            --background: rgba(29, 32, 135,0.7);
+            --border-color: white;
+            --border-radius: 30px;
+            --border-width: 2px;
+            --border-style: solid;
+          } 
+
+    }
+}
+  
+  
