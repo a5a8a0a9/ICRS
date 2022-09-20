@@ -2,7 +2,7 @@
 
 餐廳智慧推薦聊天機器人APP
 
-- feature
+- description
 
   - 聊天機器人
   - GPS定位，搜尋附近的餐廳(存在於資料庫中的)
