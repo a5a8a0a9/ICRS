@@ -12,6 +12,5 @@
 
 - tech
   - 使用 google 的 dialogflow 工具，創建自己的 AI 對話機器人。
-  - 使用 firebase 為資料庫。
   - python flask 製作後端 API
   - 前端框架: Angular, ionic
